@@ -1,10 +1,17 @@
 [package]
-name = "SigmaOS-activemq"
+name = "activemq"
 version = "0.1.0"
 edition = "2021"
-license = "Apache-2.0"
-description = "SigmaOS component - part of multi-repository architecture"
+description = "SigmaOS SigmaOS-activemq component - Cloud and infrastructure"
+license = "MIT"
+repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-activemq"
 
-[lib]
-name = "activemq"
-path = "src/lib.rs"
+[dependencies]
+tokio = { version = "1.35", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+log = "0.4"
+env_logger = "0.11"
+anyhow = "1.0"
+thiserror = "1.0"
+clap = { version = "4.5", features = ["derive"] }

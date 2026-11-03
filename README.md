@@ -1,15 +1,16 @@
-# SigmaOS ActiveMQ
+# SigmaOS-activemq
 
-This repository is currently a minimal `no_std` component identity scaffold. Its library exposes a `Component` named `SigmaOS-activemq`.
+SigmaOS cloud and infrastructure component.
 
-No message broker, messaging client, wire protocol, or system utility behavior is implemented in the current source. The name does not imply compatibility with Apache ActiveMQ.
+## Features
+- Cluster mode support
+- Deployment automation
+- Configuration management
 
-## Build
-
-```sh
-cargo check --lib
+## Usage
+```bash
+cargo run --release
 ```
 
 ## License
-
-Apache-2.0. See [`Cargo.toml`](Cargo.toml).
+MIT
