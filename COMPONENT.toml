@@ -3,12 +3,12 @@ name = "SigmaOS-activemq"
 tier = 2
 stability = "scaffold"
 language = "rust"
-description = "activemq component"
+description = "This repository is currently a minimal no_std component identity scaffold. Its library exposes a Component named SigmaOS-activemq."
 upstream = []
 
 [contract]
 provides = ["component"]
-depends_on = []
+depends_on = ["SigmaOS-system"]
 
 [maturity]
 status = "Scaffold"
