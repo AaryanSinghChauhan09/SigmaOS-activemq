@@ -1,65 +1,50 @@
-# SigmaOS-activemq Component Wiki
+# SigmaOS-SigmaOS-activemq Component Wiki
 
 ## Overview
-SigmaOS-activemq provides Apache ActiveMQ compatibility and message queue services for the SigmaOS operating system. It demonstrates the messaging subsystem and enterprise integration patterns within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic message initialization.
+SigmaOS-SigmaOS-activemq provides This repository is currently a minimal no_std component identity scaffold. Its library exposes a Component named SigmaOS-activemq. for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Messaging Abstraction
-- Fail-Fast on Messaging Initialization Errors
-- Deterministic Messaging Setup
-- Clear Abstraction Over Messaging APIs
-- Composition over Inheritance for messaging extensions
+- SigmaOS-activemq Abstraction
+- Fail-Fast on SigmaOS-activemq Initialization Errors
+- Deterministic SigmaOS-activemq Setup
+- Clear Abstraction Over SigmaOS-activemq APIs
+- Composition over Inheritance for SigmaOS-activemq extensions
 
 ## Architecture
-SigmaOS-activemq follows a messaging pattern:
-- **Messaging Core**: Provides message queue operations, topic publishing, and subscription management
-- **Broker Integration**: Supports ActiveMQ broker connectivity and failover configurations
-- **Message Format**: Supports various message formats (JSON, XML, bytes) and serialization
-- **Error Handling**: Fail-fast on invalid messaging configurations or unsupported broker types
+SigmaOS-SigmaOS-activemq follows a SigmaOS-activemq pattern:
+- **SigmaOS-activemq Core**: Provides SigmaOS-activemq support, SigmaOS-activemq management, and SigmaOS-activemq tracking
+- **Management**: Supports SigmaOS-activemq management, SigmaOS-activemq configuration, and SigmaOS-activemq lifecycle
+- **Tracking**: Supports SigmaOS-activemq status, SigmaOS-activemq tracking, and SigmaOS-activemq lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-activemq configurations or unsupported SigmaOS-activemq types
 
 ## API
 The component provides the following public APIs:
-- `messaging::queue::create(name)` - Create a new message queue
-- `messaging::queue::send(name, message)` - Send a message to a queue
-- `messaging::queue::receive(name)` - Receive a message from a queue
-- `messaging::topic::publish(name, message)` - Publish a message to a topic
-- `messaging::subscription::subscribe(name, callback)` - Subscribe to a topic with a callback
-- Error types for messaging failure scenarios or unsupported broker types
+-  - Manage a SigmaOS-activemq by given configuration
+-  - Register a SigmaOS-activemq by given name
+-  - Get SigmaOS-activemq status and SigmaOS-activemq availability
+-  - Track SigmaOS-activemq management and SigmaOS-activemq tracking
+- Error types for SigmaOS-activemq failure scenarios or unsupported SigmaOS-activemq types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific messaging configuration
-2. **Act**: Execute the code under test (message send, queue creation)
-3. **Assert**: Verify the expected messaging results
+1. **Arrange**: Set up test environment with specific SigmaOS-activemq configuration
+2. **Act**: Execute the code under test (SigmaOS-activemq init, SigmaOS-activemq management)
+3. **Assert**: Verify the expected SigmaOS-activemq results
 
 Example:
-```rust
-#[test]
-fn test_messaging_queue_send_aaa() {
-    // Arrange
-    let queue_name = "test-queue";
-    let message = Message::new("test payload");
-    
-    // Act
-    let result = messaging::queue::send(queue_name, message);
-    
-    // Assert
-    assert!(result.is_ok());
-    assert!(messaging::queue::receive(queue_name).is_some());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Messaging initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all messaging failure scenarios
-- Unit tests provided for queue operations and topic publishing
-- Integration tests for full messaging system with actual ActiveMQ broker
+- Follows Rust best practices with 
+- SigmaOS-activemq initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-activemq failure scenarios
+- Unit tests provided for SigmaOS-activemq management and configuration
+- Integration tests for full SigmaOS-activemq system with actual SigmaOS-activemq integration
 
 ## TODO
-- Add support for additional messaging protocols (STOMP, AMQP, Kafka)
-- Expand broker integration capabilities (cluster mode, persistence, security)
-- Add message format support (JSON, XML, Protobuf, serialization extensions)
-- Create integration tests with actual ActiveMQ broker instances
-- Implement message scheduling and delayed delivery features
+- Add support for additional SigmaOS-activemq types
+- Expand SigmaOS-activemq capabilities (SigmaOS-activemq features, SigmaOS-activemq configurations, SigmaOS-activemq tracking)
+- Add lifecycle features (SigmaOS-activemq tracking, SigmaOS-activemq lifecycle, SigmaOS-activemq propagation)
+- Create integration tests with actual SigmaOS-activemq systems and SigmaOS-activemq integration
+- Implement SigmaOS-activemq persistence and SigmaOS-activemq state management
